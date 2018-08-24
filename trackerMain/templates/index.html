@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>EU4 country picker</title>
+    </head>
+    <body>
+        <p>
+            <a href="/new">Create custom nation</a>
+        </p>
+        {% if content %}
+        <p>
+            List of content:
+            <ul id="todo_list">
+                {% for content in content %}
+                <li><a href="{{ todo.href }}">{{ content.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </p>
+        {% else %}
+        <p>
+            Add a custom nation to proceed, or select from preexisting
+        </p>
+        {% endif %}
+    </body>
+</html>
